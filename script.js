@@ -227,7 +227,11 @@ audio.addEventListener('ended', nextSong);
 
 document.getElementById('welcome-btn').addEventListener('click', function () {
   document.getElementById('welcome-screen').style.display = 'none';
-  playSong(); // Gọi hàm phát nhạc tự động
+
+  musicContainer.classList.add('play');
+  playBtn.querySelector('i.fas').classList.remove('fa-play');
+  playBtn.querySelector('i.fas').classList.add('fa-pause');
+  audio.play();
 
 });
 
